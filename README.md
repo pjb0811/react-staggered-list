@@ -12,16 +12,33 @@ npm install --save react-staggered-list
 
 ## Usage
 
-```tsx
-import * as React from 'react'
+[demo](https://codesandbox.io/s/w01nwo9r0l)
 
-import MyComponent from 'react-staggered-list'
+```tsx
+import * as React from 'react';
+
+import StaggeredList from 'react-staggered-list';
 
 class Example extends React.Component {
-  render () {
+  render() {
     return (
-      <MyComponent />
-    )
+      <div>
+        <h1>react-staggered-list</h1>
+        <div
+          style={{
+            width: 100,
+            height: 100,
+            margin: '0 auto'
+          }}
+        >
+          <StaggeredList>
+            <div style={{ widht: 100, height: 100, background: 'green' }} />
+            <div style={{ widht: 100, height: 100, background: 'red' }} />
+            <div style={{ widht: 100, height: 100, background: 'blue' }} />
+          </StaggeredList>
+        </div>
+      </div>
+    );
   }
 }
 ```
